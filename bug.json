@@ -1,0 +1,19 @@
+This error occurs when using the Expo CLI with a project that has a complex or unusual project structure.  It's often related to misconfigurations in the `package.json` or `expo.json` files, or inconsistencies in the way your project's assets are organized. The error message itself might be quite generic, such as `Unexpected token`, `SyntaxError`, or simply a failure to build or start the project.
+
+Example of a problematic `package.json`:
+```json
+{
+  "name": "my-expo-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "react": "18.2.0",
+    "expo": ">=47.0.0 <48.0.0",
+    "expo-status-bar": ">=1.4.4 <2.0.0",
+    "react-native": "~0.71.8",
+    // ... other dependencies
+  },
+  // Missing or incorrect scripts section
+}
+```
+
+The actual error could be hidden deep within the build process, making it difficult to pin down.
